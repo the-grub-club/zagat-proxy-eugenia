@@ -22,6 +22,8 @@ app.get('/restaurant/:id/review', (req, res) => {
     if (error) {
       res.status(404).send(error);
     } else {
+      body = body.slice(1, body.length-1);
+      body = JSON.parse(body);
       res.status(200).send(body);
     }
   })
