@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/restaurant/:id/review', (req, res) => {
   let { id } = req.params;
-  request("http://127.0.0.1:7007/restaurant/" + id + "/review", (error, response, body) => {
+  request("http://18.222.189.197/restaurant/" + id + "/review", (error, response, body) => {
     if (error) {
       res.status(404).send(error);
     } else {
